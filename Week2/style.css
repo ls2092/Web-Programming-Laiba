@@ -1,9 +1,9 @@
 /* Reset Styles */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: #505050;
+    margin: 10;
+    padding: 10;
+    font-family: sans-serif;
+    color: #5d5103;
 }
 
 /* Header Styles */
@@ -15,17 +15,17 @@ header {
 }
 
 .headeraH1 {
-    margin: 0;
+    margin: 10;
 }
 
 .banner {
-    width: 100%;
+    width: auto;
     overflow: hidden;
 }
 
 .banner img {
     width: 100%;
-    height: auto;
+    height: inherit;
     display: block;
 }
 
