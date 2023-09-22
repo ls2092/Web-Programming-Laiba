@@ -8,10 +8,10 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #282689;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
+    background-color: green;
+    color: #0b0b0b;
+    text-align: left;
+    padding: 50px;
 }
 
 .headeraH1 {
