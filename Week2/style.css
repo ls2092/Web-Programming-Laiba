@@ -4,6 +4,7 @@ body {
     padding: 10;
     font-family: Impact,sans-serif;
     color: #5d5103;
+    position: fixed;;
 }
 
 /* Header Styles */
@@ -18,7 +19,7 @@ header {
 .headeraH1 {
     margin: 10;
     font-family: 'Nunito', sans-serif;
-    position: fixed;;
+    
 }
 
 .banner {
