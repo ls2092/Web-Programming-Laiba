@@ -12,13 +12,13 @@ header {
     color: #0b0b0b;
     text-align: left;
     padding: 50px;
-    position: fixed;;
     font-family: 'Nunito', sans-serif;
 }
 
 .headeraH1 {
     margin: 10;
     font-family: 'Nunito', sans-serif;
+    position: fixed;;
 }
 
 .banner {
