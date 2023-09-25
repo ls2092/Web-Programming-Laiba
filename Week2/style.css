@@ -9,10 +9,10 @@ body {
 
 /* Header Styles */
 header {
-    background-color: green;
+    background-color: #757575;
     color: #0b0b0b;
     text-align: left;
-    padding: 50px;
+    padding: 60px;
     font-family: 'Nunito', sans-serif;
 }
 
