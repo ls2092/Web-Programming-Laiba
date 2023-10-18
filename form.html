@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+       
+        .error {
+            color:red;
+        }
+
+        .success{
+            color:blue;
+        }
+
+     </style>
+</head>
+
+<body>
+    <h1>USER REGISTRATION</h1>
+    <form id = "registrationForm">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <div class="error" id="username_Error"></div>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div class="error" id="email_Error"></div>
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div class="error" id="password_Error"></div>
+        </div>
+
+        <div>
+            <label for="ConfirmPassword">Confirm Password:</label>
+            <input type="password" id="ConfirmPassword" name="ConfirmPassword" required>
+            <div class="error" id="ConfirmPasswordError"></div>
+        </div>
+
+        <button type="submit" id="SubmitBtn">Register</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const ConfirmPassword = document.getElementById('ConfirmPassword');
+        const username_Error = document.getElementById('username_Error');
+        const email_Error = document.getElementById('email_Error');
+        const password_Error = document.getElementById('password_Error');
+        const ConfirmPasswordError = document.getElementById('ConfirmPasswordError');
+        const SubmitBtn = document.getElementById('Submitbtn');
+
+        function validateUsername(){
+            if(username.value === ''){
+                username_Error.textContent = 'Username field cannot be empty. Please enter username.';
+                username.classList.add('Error');
+                return false;
+            }
+            username_Error.textContent = '';
+            username.classList.remove('Error');
+            username.classList.add('Success');
+            return true;
+        }
+
+        function validateEmail(){
+            const EmailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (email.value === ''){
+                email_Error.textContent = "Email field cannot be empty. Please enter email.";
+                email.classList.add('Error');
+                return false;
+            }
+            if (!EmailPattern.test(email.value)){
+                email_Error.textContent = "Invalid email. Please enter valid email.";
+                email.classList.add('Error');
+                return false;
+            }
+            email_Error.textContent = '';
+            email.classList.remove('Error');
+            email.classList.add('Success');
+            return true;
+        }
+
+        function validatePassword(){
+            if (password.value === ''){
+                password_Error.textContent = 'Password cannot be empty. Please enter password';
+                password.classList.add('Error');
+                return false;
+            }
+            if(password.value.length < 8){
+                password_Error.textContent = 'Password length cannot be less than 8. Please enter again.'
+                password.classList.add('Error');
+                return false;
+            }
+            password_Error.textContent = '';
+            password.classList.remove('Error');
+            password.classList.add('Success');
+            return true;
+        }
+
+        function validateConfirmPassword(){
+            if (ConfirmPassword.value === ''){
+                ConfirmPassword.textContent = 'Confirm Password field cannot be empty.';
+                ConfirmPassword.classList.add('Error');
+                return false;
+            }
+            if(ConfirmPassword.value !== password.value){
+                ConfirmPassword.textContent = 'Passwords donot match.'
+                ConfirmPassword.classList.add('Error');
+                return false;
+            }
+            ConfirmPasswordError.textContent = '';
+            ConfirmPassword.classList.remove('Error');
+            ConfirmPassword.classList.add('Success');
+            return true;
+        }
+
+        function validateForm(){
+            const isUsernameValid = validateUsername();
+            const isEmailValid = validateEmail();
+            const isPasswordValid = validatePassword();
+            const isConfirmPasswordValid = validateConfirmPassword();
+
+            return isUsernameValid && isEmailValid && isPasswordValid && isConfirmPasswordValid;
+        }
+
+        form.addEventListener('submit', function (e) {
+            if(!validateForm()){
+                e.preventDefault(); //prevents the submission of the form
+            }
+        });
+
+        username.addEventListener('blur', validateUsername);
+        email.addEventListener('blur', validateEmail);
+        password.addEventListener('blur', validatePassword);
+        ConfirmPassword.addEventListener('blur', validateConfirmPassword);
+    </script>
+</body>
+</html>

@@ -33,8 +33,33 @@
 
     <!-- Banner Section -->
     <section class="banner-container">
-      <img src="img/travel banner.svg" alt="Illustrative banner of travel destinations" class="centered-banner">
-    </section>
+      <img name="slide" alt="Alt goes here" title="Title goes here"
+      width="70%"/>
+      </section>
+
+      <script>
+        let index=0;
+
+        const images = [
+          "images/Untitled design (1).png",
+          "images/Untitled design (2).png",
+          "images/Untitled design (3).png",
+          "images/Untitled design (4).png",
+          "images/Untitled design (5).png",
+          "images/Untitled design (6).png",
+          "images/Untitled design (7).png",
+          "images/Untitled design.png"
+        ];
+
+        function ChangeSource() {
+          const ImageElement = document.querySelector('[name="slide"]');
+          ImageElement.src = images[index];
+          index = (index + 1) % images.length;
+        }
+        setInterval(ChangeSource,3000);
+        window.addEventListener('laod',ChangeSource);
+      </script>
+      
 
     <!-- Main Content Section -->
     <main class="services">
