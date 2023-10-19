@@ -1,0 +1,13 @@
+SLIDE COURSEL REPORT 
+WEB PROGRAMMING LAB
+Laiba Shehzad
+Heriot-Watt University (ls2092)
+
+As instructed in the lab sheet, I first of all replaced the banner section with the code provided.
+After that I declared a variable named SlideIndex for index of the array and initialised it to zero.
+A constant variable timeInterval was also declared for the slideshow which was set to 2500.
+And after that a function was written to change images on the slideshow. Each time an image was changed 
+the index was incremented with wrap around of the array so that the slideshow keeps on repeating.
+
+In conclusion, I faced no challenges while implemeting it as the lab sheet clearly explained,
+step by step, what to do. 
