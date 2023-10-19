@@ -10,7 +10,7 @@ background color, border radius for rounded corners, and font size */
     font-size: 12px; 
     } 
     /* Style for the form's heading: setting the text color and alignment */ 
-    #h1 { 
+    h1 { 
     color: #0f2027; /* Dark text color for the heading */ 
     text-align: center; /* Center-align the heading */ 
     } 
@@ -28,7 +28,7 @@ background color, no border, and rounded corners */
 } 
  
 /* Container for input fields: using flexbox for layout, column direction */ 
-#div { 
+.input-control { 
     display: flex; 
     flex-direction: column; /* Stack the children (label, input, error message) 
 vertically */ 
@@ -59,7 +59,7 @@ input:focus {
     border-color: #ff3860; /* Red border to indicate an error in input */ 
     } 
     /* Style for the error message: text color, font size, and height */ 
-    .input-control .error { 
+    .error { 
     color: #ff3860; /* Red text color for error messages */ 
     font-size: 9px; /* Smaller font size for error messages */ 
     height: 13px; /* Explicit height to ensure consistent spacing */ 
