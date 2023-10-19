@@ -38,28 +38,23 @@
       </section>
 
       <script>
-        let index=0;
+        let SlideIndex=0;
 
-        const images = [
-          "images/Untitled design (1).png",
-          "images/Untitled design (2).png",
-          "images/Untitled design (3).png",
-          "images/Untitled design (4).png",
-          "images/Untitled design (5).png",
-          "images/Untitled design (6).png",
-          "images/Untitled design (7).png",
-          "images/Untitled design.png"
-        ];
+        const images = [];
+        const timeinterval = 2500;
+        images.push("img/Untitled design (1).png","img/Untitled design (2).png","img/Untitled design (3).png","img/Untitled design (4).png"
+        ,"img/Untitled design (5).png","img/Untitled design (6).png","img/Untitled design (7).png","img/Untitled design.png");
+         
 
         
 
         function ChangeSource() {
           const ImageElement = document.querySelector('[name="slide"]');
-          ImageElement.src = images[index];
-          index = (index + 1) % images.length;
+          ImageElement.src = images[SlideIndex];
+          SlideIndex = (SlideIndex + 1) % images.length;
         }
-        setInterval(ChangeSource,3000);
-        window.addEventListener('laod',ChangeSource);
+        setInterval(ChangeSource,timeinterval);
+        window.addEventListener("laod",ChangeSource);
       </script>
       
 

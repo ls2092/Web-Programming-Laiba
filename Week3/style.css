@@ -67,7 +67,7 @@ nav .active{
 }
 
 /* Banner Styles */
-.banner-container {
+.slider-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,7 @@ nav .active{
     overflow: hidden;
 }
 
-.centered-banner {
+.slider-container img {
     padding: 30px;
     max-width: 80%;
     height: auto;
