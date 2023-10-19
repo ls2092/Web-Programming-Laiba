@@ -18,7 +18,7 @@
 
 
 <body>
-    <div class = "input-control">
+    <div class="input-control">
     <h1>USER REGISTRATION</h1>
     <form id = "registrationForm">
         <div>
@@ -109,7 +109,7 @@
 
         function validateConfirmPassword(){
             if (ConfirmPassword.value === ''){
-                ConfirmPassword.textContent = 'Confirm Password field cannot be empty.';
+                ConfirmPasswordError.textContent = 'Confirm Password field cannot be empty.';
                 ConfirmPassword.classList.add('Error');
                 return false;
             }

@@ -36,7 +36,7 @@ vertically */
  
 /* Style for input fields inside the container: border style, rounded corners, 
 block-level display, font size, padding, full width */ 
-input { 
+.input-control input { 
     border: 2px solid #f0f0f0; /* Light gray border for the inputs */ 
     border-radius: 4px; /* Rounded corners for the inputs */ 
     display: block; /* Display input field as a block */ 
