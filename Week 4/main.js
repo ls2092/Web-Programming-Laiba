@@ -27,3 +27,4 @@ var myCity = [
     }
 ]
 
+console.log(myCity[1].country);
