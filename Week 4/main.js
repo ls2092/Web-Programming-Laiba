@@ -7,24 +7,51 @@ var ourRequest = new XMLHttpRequest();
 ourRequest.send();
 
 
-var myCity = [
-    {
-        "name" : "Dubai",
-        "country" : "UAE",
-        "place" : "Dubai Mall"
-    },
+//*var myCity = [
+   // {
+      //  "name" : "Dubai",
+      //  "country" : "UAE",
+      //  "place" : "Dubai Mall"
+    //},
 
-    {
-        "name" : "Milan",
-        "country" : "Italy",
-        "place" : "Domo di Milan"
-    },
+    //{
+      //  "name" : "Milan",
+      //  "country" : "Italy",
+      //  "place" : "Domo di Milan"
+    //},
 
-    {
-        "name" : "Abu Dhabi",
-        "country" : "UAE",
-        "place" : "Marina Mall"
-    }
-]
+    //{
+      //  "name" : "Abu Dhabi",
+      //  "country" : "UAE",
+      //  "place" : "Marina Mall"
+    //}
+//]
 
-console.log(myCity[1].country);
+//console.log(myCity[1].country);
+
+var btn = document.getElementById("btn");
+btn.addEventListener("click", function(){
+var ourRequest = new XMLHttpRequest();
+ourRequest.open('GET', 'https://your-github-username.github.io/your-repositoryname/cities1.json');
+ourRequest.onload = function() {
+var ourData = JSON.parse(ourRequest.responseText);
+console.log(ourData[0]);
+};
+ourRequest.send();
+})
+
+var cityContainer = document.getElementById("city-info");
+var btn = document.getElementById("btn");
+btn.addEventListener("click", function(){
+var ourRequest = new XMLHttpRequest();
+ourRequest.open('GET', 'https://your-github-username.github.io/your-repositoryname/cities1.json');
+ourRequest.onload = function() {
+var ourData = JSON.parse(ourRequest.responseText);
+renderHTML(ourData);
+};
+ourRequest.send();
+});
+function renderHTML(data){
+var htmlString = "this is a test";
+cityContainer.insertAdjacentHTML('beforeend' , htmlString);
+}
