@@ -7,27 +7,27 @@ var ourRequest = new XMLHttpRequest();
 ourRequest.send();
 
 
-//*var myCity = [
-   // {
-      //  "name" : "Dubai",
-      //  "country" : "UAE",
-      //  "place" : "Dubai Mall"
-    //},
+var myCity = [
+    {
+        "name" : "Dubai",
+        "country" : "UAE",
+        "place" : "Dubai Mall"
+    },
 
-    //{
-      //  "name" : "Milan",
-      //  "country" : "Italy",
-      //  "place" : "Domo di Milan"
-    //},
+    {
+        "name" : "Milan",
+        "country" : "Italy",
+        "place" : "Domo di Milan"
+    },
 
-    //{
-      //  "name" : "Abu Dhabi",
-      //  "country" : "UAE",
-      //  "place" : "Marina Mall"
-    //}
-//]
+    {
+        "name" : "Abu Dhabi",
+        "country" : "UAE",
+        "place" : "Marina Mall"
+    }
+]
 
-//console.log(myCity[1].country);
+console.log(myCity[1].country);
 
 var btn = document.getElementById("btn");
 btn.addEventListener("click", function(){
