@@ -5,3 +5,26 @@ var ourRequest = new XMLHttpRequest();
     console.log(ourData[0]);
 };
 ourRequest.send();
+
+
+var myCity = [
+    {
+        "name" : "Dubai",
+        "country" : "UAE",
+        "place" : "Dubai Mall"
+    },
+
+    {
+        "name" : "Milan",
+        "country" : "Italy",
+        "place" : "Domo di Milan"
+    },
+
+    {
+        "name" : "Abu Dhabi",
+        "country" : "UAE",
+        "place" : "Marina Mall"
+    }
+]
+
+console.log(myCity[1].country);
