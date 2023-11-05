@@ -1,5 +1,5 @@
 //getting API key
-const APIKey = 'YourAPIKey';
+const APIKey = 'f6b2eb3f2ea91d8b59df51a2efc12d87';
 
 //creating variable to store inputs
 
