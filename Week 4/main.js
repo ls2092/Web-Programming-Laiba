@@ -21,9 +21,13 @@ btn.addEventListener("click", function(){
 });
 
 function renderHTML(data){
-    var htmlString = "this is a test";
-    cityContainer.insertAdjacentElement('beforeend' , htmlString)
-}
+    var htmlString = "";
+    for (i=0; i<data.length; i++){
+    htmlString += "<p>" + data[i].name + " is a city in " + data[i].country + ".</p>"
+    ;
+    }
+    cityContainer.insertAdjacentHTML('beforeend' , htmlString);
+    }
 
 
 
