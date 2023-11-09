@@ -22,12 +22,16 @@ button.addEventListener('click', () => {
             const weatherDescription = data.weather[0].description;
             const mainTemperature = data.main.temp;
             const windSpeed = data.wind.speed;
-
-            weatherInfo.innerHTML = `
+            
+        //creating a div to hold current info so weather info stacks up instead of replacing
+            const cityWeatherDiv = document.createElement('div');
+            cityWeatherDiv.innerHTML = `
             <p>Weather Description: ${weatherDescription}</p>
             <p>Main Temperature: ${mainTemperature}</p>
             <p>Wind Speed: ${windSpeed}</p>
             `;
+            //apppending new info to existing info
+            weatherInfo.appendChild(cityWeatherDiv);
         }).fail(function(error){
             console.error('Error:', error.status, error.statusText);
         });
