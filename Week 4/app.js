@@ -17,13 +17,15 @@ button.addEventListener('click', () => {
     } else {
         //making an http request
         const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${APIKey}`;
+        
+       
 
         $.get(apiURL, function(data) {
             const weatherDescription = data.weather[0].description;
             const mainTemperature = data.main.temp;
             const windSpeed = data.wind.speed;
             
-        //creating a div to hold current info so weather info stacks up instead of replacing
+             //creating a div to hold current info so weather info stacks up instead of replacing
             const cityWeatherDiv = document.createElement('div');
             cityWeatherDiv.innerHTML = `
             <p>Weather Description: ${weatherDescription}</p>
@@ -32,6 +34,7 @@ button.addEventListener('click', () => {
             `;
             //apppending new info to existing info
             weatherInfo.appendChild(cityWeatherDiv);
+            console.log("-----------------------------------");
         }).fail(function(error){
             console.error('Error:', error.status, error.statusText);
         });
