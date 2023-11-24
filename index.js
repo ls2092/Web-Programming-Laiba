@@ -1,11 +1,12 @@
 const express = require('express');
 const mysql = require('mysql');
 const dotenv = require('dotenv');
+dotenv.config({path: './.env'});
 const path = require('path');
 const cookieParser = require('cookie-parser');
-dotenv.config({path: './.env'});
 const app = express();
 const port = 4000;
+//require('dotenv').config({ path: './.env' });
 
 
 const db = mysql.createConnection({
@@ -27,7 +28,7 @@ const publicDirectory = path.join(__dirname, './public');
 app.use(express.static(publicDirectory));
 app.set('view engine', 'hbs');
 app.use(express.json());
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: true}));
 app.use(cookieParser());
 
 
@@ -36,7 +37,7 @@ app.use(cookieParser());
 //Define routes
 app.use('/', require('./routes/pages'));
 app.use('/auth', require('./routes/auth'));
-app.use('/auth', require('./routes/auth'));
+
 
 
 app.listen(port, () => {

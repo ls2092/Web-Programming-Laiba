@@ -16,8 +16,13 @@
         <h1>Node js - MySql Project</h1>
         <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="">Logout</a></li>
+        {{#if user}}
+        <li><a href="/profile">Register</a></li>
+        <li><a href="/auth/logout">Logout</a></li>
+        {{else}}
+        <li><a href="/login">Login</a></li>
         <li><a href="/register">Register</a></li>
+        {{/if}}
     </ul>
     </nav>
 
@@ -25,7 +30,7 @@
 <div class="card">
             <div class="card-body">
             <h5 class="card-title">User Authentication System</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Click the following button to login or register</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
     </div>
